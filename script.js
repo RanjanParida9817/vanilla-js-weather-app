@@ -34,6 +34,8 @@ async function fetchWeather(cityName){
         const data = await response.json();
         updateUI(data);
 
+        localStorage.setItem('cityname', cityName);
+
     }
     catch(error){
         console.error(error);
@@ -50,5 +52,12 @@ searchForm.addEventListener('submit',(event)=>{
     if(cityName){
         fetchWeather(cityName);
         cityInput.value = '';
+    }
+})
+
+window.addEventListener('DOMContentLoaded',()=>{
+    const lastCityName = localStorage.getItem('cityname');
+    if(lastCityName){
+        fetchWeather(lastCityName);
     }
 })
