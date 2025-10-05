@@ -1,0 +1,75 @@
+body {
+    background-color: #f1f5f9;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 90vw;
+    max-width: 400px;
+}
+
+.search-form {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.city-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.search-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #49a6e9;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-size: 1rem;
+}
+
+.weather-card {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Initially hidden */
+    display: none;
+}
+
+.location {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.condition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.condition-text {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.error-message {
+    text-align: center;
+    color: #d9534f;
+    margin-top: 1rem;
+}
