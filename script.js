@@ -26,12 +26,15 @@ async function fetchWeather(cityName){
         updateUI(data);
 
     }
+    catch(error){
+        console.error(error);
+    }
 
 
 }
 
 
-searchForm.addEventListener('submit',(event){
+searchForm.addEventListener('submit',(event)=>{
     event.preventDefault();
 
     const cityName = cityInput.value.trim();
