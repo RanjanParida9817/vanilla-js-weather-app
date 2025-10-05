@@ -12,6 +12,15 @@ const errorMessageEl = document.getElementById('error-message');
 const api_key = "9629e2e3bbfa73edd343b9bae3f60a26";
 
 
+const updateUI = (data)=> {
+    errorMessageEl.textContent = "";
+    weatherCard.style.display = 'block';
+
+    locationEl.textContent = data.name;
+    temperatureEl.textContent = data.main.temp;
+    conditionIconEl.textContent = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+}
+
 async function fetchWeather(cityName){
     try{
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api_key}`);
