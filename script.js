@@ -18,7 +18,7 @@ const updateUI = (data)=> {
 
     locationEl.textContent = data.name;
     temperatureEl.textContent = data.main.temp;
-    conditionIconEl.textContent = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    conditionIconEl.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 }
 
 async function fetchWeather(cityName){
