@@ -27,4 +27,16 @@ async function fetchWeather(cityName){
 
     }
 
+
 }
+
+
+searchForm.addEventListener('submit',(event){
+    event.preventDefault();
+
+    const cityName = cityInput.value.trim();
+    if(cityName){
+        fetchWeather(cityName);
+        cityInput.value = '';
+    }
+})
